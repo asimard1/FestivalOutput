@@ -6,7 +6,8 @@ import time
 pyautogui.PAUSE = 0
 pygame.init()
 
-DELAY = 0.015 # should be enough
+# should be enough, and hoping it's not too much...
+DELAY = 0.015
 
 joysticks = []
 
