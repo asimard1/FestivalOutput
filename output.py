@@ -26,10 +26,9 @@ class ReadInput:
             joysticks[-1].init()
 
     def input(self):
-        # for al the connected joysticks
         global held
         global tmax
-        # t0 = time.time()
+        # t0 = time.time() # To measure maximum input lag
         for event in pygame.event.get():
             dictionary = event.dict
             # Button for fret
@@ -71,9 +70,6 @@ class ReadInput:
                     held = pressed.copy()
             except:
                 pass
-
-            # if value is not None and type(value) == type(0.1) and axis == 1:
-            #     pass  # whammy
 
         for i, _ in enumerate(held):
             if held[i] and not pressed[i]:
